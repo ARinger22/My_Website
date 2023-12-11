@@ -11,7 +11,7 @@ import {
 
 function App() {
   return (
-    <div className="h-screen bg-gradient-to-b from-black to-gray-900">
+    <div className="h-screen bg-gradient-to-b from-black to-gray-500">
       <Router>
         <Navbar />
         <Routes>

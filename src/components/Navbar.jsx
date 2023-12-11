@@ -1,5 +1,29 @@
 import React, { useState } from 'react';
+import styled, { keyframes } from 'styled-components';
 import logo from '../assets/my_logo.svg';
+
+const StickyNavbar = styled.nav`
+  position: sticky;
+  top: 0;
+  z-index: 100;
+`;
+
+const slideInFromLeft = keyframes`
+      from {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    `;
+
+const MobileMenu = styled.div`
+    @media (max-width: 640px) {
+        animation: ${slideInFromLeft} 0.3s ease-in-out;
+    }
+`;
 
 export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -10,21 +34,21 @@ export default function Navbar() {
 
     return (
         <div >
-            <div className="mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">
+            <StickyNavbar className="mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-14 items-center justify-between">
                     <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                         <div className="flex flex-shrink-0 items-center">
                             <img className="h-10 w-auto filter invert " src={logo} alt="logo" />
-                            <h1 className="text-white ml-2 text-lg font-extrabold">Arpit</h1>
+                            <h1 className="text-white ml-2 text-lg font-extrabold"><a href='/'> Arpit </a></h1>
                         </div>
                         <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end">
                             <div className="hidden sm:block">
                                 <div className="flex space-x-4">
-                                    <a href="/" className="text-white rounded-md px-3 py-2 text-large font-medium hover:border-b hover:border-blue-400 hover:border-b-2" aria-current="page">Home</a>
-                                    <a href="/about" className="text-gray-300 hover:border-b hover:border-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium">About</a>
-                                    <a href="/experience" className="text-gray-300 hover:border-b hover:border-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium">Experience</a>
-                                    <a href="/projects" className="text-gray-300 hover:border-b hover:border-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium">Projects</a>
-                                    <a href="/contact" className="text-gray-300 hover:border-b hover:border-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium">Contact</a>
+                                    <a href="/" className="text-white rounded-md px-3 py-2 text-large font-medium hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2" aria-current="page">Home</a>
+                                    <a href="/about" className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium">About</a>
+                                    <a href="/experience" className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium">Experience</a>
+                                    <a href="/projects" className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium">Projects</a>
+                                    <a href="/contact" className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium">Contact</a>
                                 </div>
                             </div>
                         </div>
@@ -50,17 +74,17 @@ export default function Navbar() {
                     </div>
                 </div>
                 {isMobileMenuOpen &&
-                    <div className="sm:hidden" id="mobile-menu">
+                    <MobileMenu className="sm:hidden bg-gray-1000" id="mobile-menu">
                         <div className="">
-                            <a href="/" className="text-white rounded-md px-1 py-2 text-large font-medium hover:border-b hover:border-blue-400 hover:border-b-2" aria-current="page">Home</a>
-                            <a href="/about" className="text-gray-300 hover:border-b hover:border-blue-400 hover:border-b-2 rounded-md px-2 py-2 text-large font-medium">About</a>
-                            <a href="/experience" className="text-gray-300 hover:border-b hover:border-blue-400 hover:border-b-2 rounded-md px-2 py-2 text-large font-medium">Experience</a>
-                            <a href="/projects" className="text-gray-300 hover:border-b hover:border-blue-400 hover:border-b-2 rounded-md px-2 py-2 text-large font-medium">Projects</a>
-                            <a href="/contact" className="text-gray-300 hover:border-b hover:border-blue-400 hover:border-b-2 rounded-md px-2 py-2 text-large font-medium">Contact</a>
+                            <a href="/" className="text-white rounded-md px-1 py-1 text-large font-medium hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2" aria-current="page">Home</a>
+                            <a href="/about" className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium">About</a>
+                            <a href="/experience" className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium">Experience</a>
+                            <a href="/projects" className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium">Projects</a>
+                            <a href="/contact" className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium">Contact</a>
                         </div>
-                    </div>
+                    </MobileMenu>
                 }
-            </div>
+            </StickyNavbar>  
         </div>
     );
 }

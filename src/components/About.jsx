@@ -53,6 +53,31 @@ const Info = styled.div`
   animation: ${slideInFromRight} 0.1s ease-in-out;
 `;
 
+const gradientAnimation = {
+  position: 'relative',
+  overflow: 'hidden',
+};
+
+const gradientOverlay = {
+  content: '',
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  background: 'linear-gradient(to bottom right, transparent 0%, transparent 33%, fuchsia , transparent 55%, red , transparent 75%, yellow 100%)',
+  transform: 'translateX(-100%)',
+  transition: 'transform 2s ease',
+};
+
+const handleHover = (event) => {
+  event.currentTarget.firstChild.style.transform = 'translateX(100%)';
+};
+
+const handleMouseLeave = (event) => {
+  event.currentTarget.firstChild.style.transform = 'translateX(-100%)';
+};
+
 export default function About() {
   return (
     <div className='h-5500 flex items-center justify-center bg-gradient-to-b from-black to-gray-700' id="About_page" >
@@ -77,16 +102,116 @@ export default function About() {
         <div>
           <h1 className='flex mt-4 items-center justify-center text-blue-600 text-5xl font-bold text-white'>Skills</h1>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
-            <div className='hover:bg-gradient-to-r hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 rounded-lg'> <SkillCard color="#FFCE14" imgSrc={python} altText="Python" title="Python" /> </div>
-            <div className='hover:bg-gradient-to-r hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 rounded-lg'> <SkillCard color="#5C6BC0" imgSrc={clang} altText="C" title="C" /></div>
-            <div className='hover:bg-gradient-to-r hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 rounded-lg'> <SkillCard color="#659AD2" imgSrc={c2lang} altText="C++" title="C++" /></div>
-            <div className='hover:bg-gradient-to-r hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 rounded-lg'> <SkillCard color="#61DAFB" imgSrc={chash} altText="C#" title="C#" /></div>
-            <div className='hover:bg-gradient-to-r hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 rounded-lg'> <SkillCard color="#fefe01" imgSrc={javascript} altText="JavaScript" title="JavaScript" /></div>
-            <div className='hover:bg-gradient-to-r hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 rounded-lg'> <SkillCard color="#F44336" imgSrc={solidity} altText="solidity" title="solidity" /></div>
-            <div className='hover:bg-gradient-to-r hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 rounded-lg'> <SkillCard color="#00B871" imgSrc={postgres} altText="postgres" title="postgres" /></div>
-            <div className='hover:bg-gradient-to-r hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 rounded-lg'> <SkillCard color="#fc4503" imgSrc={reactjs} altText="reactjs" title="reactjs" /></div>
-            <div className='hover:bg-gradient-to-r hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 rounded-lg'> <SkillCard color="#1B73BA" imgSrc={nodejs} altText="nodejs" title="nodejs" /></div>
-            <div className='hover:bg-gradient-to-r hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 rounded-lg'> <SkillCard color="#18B5B9" imgSrc={tailwindcss} altText="Tailwind" title="Tailwind" /></div>
+            <div
+              className='rounded-lg'
+              style={gradientAnimation}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div style={gradientOverlay}></div>
+              <div className='bg-gradient-to-r'>
+                <SkillCard color="#FFCE14" imgSrc={python} altText="Python" title="Python" />
+              </div>
+            </div>
+            <div
+              className='rounded-lg'
+              style={gradientAnimation}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div style={gradientOverlay}></div>
+              <div className='bg-gradient-to-r'>
+                <SkillCard color="#5C6BC0" imgSrc={clang} altText="C" title="C" />
+              </div>
+            </div>
+            <div
+              className='rounded-lg'
+              style={gradientAnimation}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div style={gradientOverlay}></div>
+              <div className='bg-gradient-to-r'>
+                <SkillCard color="#659AD2" imgSrc={c2lang} altText="C++" title="C++" />
+              </div>
+            </div>
+            <div
+              className='rounded-lg'
+              style={gradientAnimation}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div style={gradientOverlay}></div>
+              <div className='bg-gradient-to-r'>
+                <SkillCard color="#61DAFB" imgSrc={chash} altText="C#" title="C#" />
+              </div>
+            </div>
+            <div
+              className='rounded-lg'
+              style={gradientAnimation}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div style={gradientOverlay}></div>
+              <div className='bg-gradient-to-r'>
+                <SkillCard color="#fefe01" imgSrc={javascript} altText="JavaScript" title="JavaScript" />
+              </div>
+            </div>
+            <div
+              className='rounded-lg'
+              style={gradientAnimation}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div style={gradientOverlay}></div>
+              <div className='bg-gradient-to-r'>
+                <SkillCard color="#F44336" imgSrc={solidity} altText="solidity" title="solidity" />
+              </div>
+            </div>
+            <div
+              className='rounded-lg'
+              style={gradientAnimation}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div style={gradientOverlay}></div>
+              <div className='bg-gradient-to-r'>
+                <SkillCard color="#00B871" imgSrc={postgres} altText="postgres" title="postgres" />
+              </div>
+            </div>
+            <div
+              className='rounded-lg'
+              style={gradientAnimation}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div style={gradientOverlay}></div>
+              <div className='bg-gradient-to-r'>
+                <SkillCard color="#fc4503" imgSrc={reactjs} altText="reactjs" title="reactjs" />
+              </div>
+            </div>
+            <div
+              className='rounded-lg'
+              style={gradientAnimation}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div style={gradientOverlay}></div>
+              <div className='bg-gradient-to-r'>
+                <SkillCard color="#1B73BA" imgSrc={nodejs} altText="nodejs" title="nodejs" />
+              </div>
+            </div>
+            <div
+              className='rounded-lg'
+              style={gradientAnimation}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div style={gradientOverlay}></div>
+              <div className='bg-gradient-to-r'>
+                <SkillCard color="#18B5B9" imgSrc={tailwindcss} altText="Tailwind" title="Tailwind" />
+              </div>
+            </div>
           </div>
         </div>
       </div>

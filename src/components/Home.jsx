@@ -50,24 +50,24 @@ const Info = styled.h1`
 
 const moveInCircle = keyframes`
   0% {
-    transform: translate(0%, 0%) translate(-15px, 0);
+    transform: translate(0%, 0%) translate(-20px, 0);
   }
   25% {
-    transform: translate(0%, 0%) translate(0, -15px);
+    transform: translate(0%, 0%) translate(0, -20px);
   }
   50% {
-    transform: translate(0%, 0%) translate(15px, 0);
+    transform: translate(0%, 0%) translate(20px, 0);
   }
   75% {
-    transform: translate(0%, 0%) translate(0, 15px);
+    transform: translate(0%, 0%) translate(0, 20px);
   }
   100% {
-    transform: translate(0%, 0%) translate(-15px, 0);
+    transform: translate(0%, 0%) translate(-20px, 0);
   }
 `;
 
 const CircularMotion = styled.div`
-  animation: ${moveInCircle} 7s linear infinite;
+  animation: ${moveInCircle} 6s linear infinite;
   position: relative;
   width: 100%;
   height: 100%;
@@ -174,9 +174,11 @@ export default function Home() {
             </Container>
             <More className='flex items-center justify-center'>
                 <div className="animate-bounce w-11 h-11 flex items-center justify-center bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-full">
-                    <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                    </svg>
+                    <a href='#About_page'>
+                      <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                      </svg>
+                    </a>
                 </div>
             </More>
         </div>

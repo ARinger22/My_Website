@@ -1,6 +1,17 @@
 import React from 'react';
 import image from '../assets/my_image.png';
 import styled, { keyframes } from 'styled-components';
+import python from '../assets/python-5.svg'
+import clang from '../assets/c-1.svg'
+import c2lang from '../assets/c.svg'
+import javascript from '../assets/javascript-1.svg'
+import reactjs from '../assets/react-2.svg'
+import nodejs from '../assets/nodejs-icon.svg'
+import postgres from '../assets/postgresql.svg'
+import solidity from '../assets/solidity.svg'
+import tailwindcss from '../assets/tailwind-css-2.svg'
+import chash from '../assets/c--4.svg'
+import SkillCard from './SkillCard';
 
 const slideInFromLeft = keyframes`
       from {
@@ -42,23 +53,6 @@ const Info = styled.div`
   animation: ${slideInFromRight} 0.1s ease-in-out;
 `;
 
-function SkillCard({ color, imgSrc, altText, title }) {
-  return (
-    <div className={`border border-gray-200 rounded-lg shadow p-4 hover:bg-gray-100`} style={{ borderColor: color }}>
-      <div className="relative">
-        <img
-          src={imgSrc}
-          alt={altText}
-          className="mx-auto w-20 h-20 object-contain"
-          style={{ borderColor: color }}
-        />
-        <h4 className="text-center mt-2">{title}</h4>
-        <span className="border" style={{ backgroundColor: color }}></span>
-      </div>
-    </div>
-  );
-}
-
 export default function About() {
   return (
     <div className='h-5500 flex items-center justify-center bg-gradient-to-b from-black to-gray-700' id="About_page" >
@@ -81,18 +75,18 @@ export default function About() {
           </Info>
         </div>
         <div>
-          <h1 className='flex mt-4 items-center justify-center text-blue-500 text-5xl font-bold text-white'>Skills</h1>
+          <h1 className='flex mt-4 items-center justify-center text-blue-600 text-5xl font-bold text-white'>Skills</h1>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
-            <SkillCard color="#FFCE14" imgSrc="/skills/python.svg" altText="Python" title="Python" />
-            <SkillCard color="#5C6BC0" imgSrc="/skills/c.svg" altText="C" title="C" />
-            <SkillCard color="#659AD2" imgSrc="/skills/cpp.svg" altText="C++" title="C++" />
-            <SkillCard color="#fefe01" imgSrc="/skills/javascript.svg" altText="JavaScript" title="JavaScript" />
-            <SkillCard color="#F44336" imgSrc="/skills/java.svg" altText="Java" title="Java" />
-            <SkillCard color="#00B871" imgSrc="/skills/django.svg" altText="Django" title="Django" />
-            <SkillCard color="#fc4503" imgSrc="/skills/html.svg" altText="HTML" title="HTML" />
-            <SkillCard color="#1B73BA" imgSrc="/skills/css.svg" altText="CSS" title="CSS" />
-            <SkillCard color="#18B5B9" imgSrc="/skills/tailwindcss.svg" altText="Tailwind" title="Tailwind" />
-            <SkillCard color="#61DAFB" imgSrc="/skills/react.svg" altText="React JS" title="React JS" />
+            <div className='hover:bg-gradient-to-r hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 rounded-lg'> <SkillCard color="#FFCE14" imgSrc={python} altText="Python" title="Python" /> </div>
+            <div className='hover:bg-gradient-to-r hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 rounded-lg'> <SkillCard color="#5C6BC0" imgSrc={clang} altText="C" title="C" /></div>
+            <div className='hover:bg-gradient-to-r hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 rounded-lg'> <SkillCard color="#659AD2" imgSrc={c2lang} altText="C++" title="C++" /></div>
+            <div className='hover:bg-gradient-to-r hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 rounded-lg'> <SkillCard color="#61DAFB" imgSrc={chash} altText="C#" title="C#" /></div>
+            <div className='hover:bg-gradient-to-r hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 rounded-lg'> <SkillCard color="#fefe01" imgSrc={javascript} altText="JavaScript" title="JavaScript" /></div>
+            <div className='hover:bg-gradient-to-r hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 rounded-lg'> <SkillCard color="#F44336" imgSrc={solidity} altText="solidity" title="solidity" /></div>
+            <div className='hover:bg-gradient-to-r hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 rounded-lg'> <SkillCard color="#00B871" imgSrc={postgres} altText="postgres" title="postgres" /></div>
+            <div className='hover:bg-gradient-to-r hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 rounded-lg'> <SkillCard color="#fc4503" imgSrc={reactjs} altText="reactjs" title="reactjs" /></div>
+            <div className='hover:bg-gradient-to-r hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 rounded-lg'> <SkillCard color="#1B73BA" imgSrc={nodejs} altText="nodejs" title="nodejs" /></div>
+            <div className='hover:bg-gradient-to-r hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 rounded-lg'> <SkillCard color="#18B5B9" imgSrc={tailwindcss} altText="Tailwind" title="Tailwind" /></div>
           </div>
         </div>
       </div>

@@ -32,11 +32,11 @@ const slideInFromRight = keyframes`
 
 const slideInFromBottom = keyframes`
       from {
-        transform: translateY(-500px);
+        transform: translateY(50px);
         opacity: 0;
       }
       to {
-        transform: translateX(0);
+        transform: translateY(0);
         opacity: 1;
       }
     `;

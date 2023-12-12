@@ -87,6 +87,13 @@ const NavComponents = styled.h1`
   animation: ${slideInFromRight} 0.3s ease-in-out;
 `;
 
+const Heading = styled.span`
+    background: linear-gradient(90deg, #2563eb, #48bb78, #6366f1);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1.6rem; 
+`;
+
 export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -95,13 +102,13 @@ export default function Navbar() {
     };
 
     return (
-        <StickyNavbar className='fixed' style={{ border: '2px solid red' }} >
+        <StickyNavbar className='fixed'>
             <nav className="mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                     <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                         <Name className="flex flex-shrink-0 items-center">
                             <a href='/'> <img className="h-10 w-auto filter invert hover:bg-blue-200" src={logo} alt="logo" /> </a>
-                            <h1 className="text-white ml-2 text-lg font-extrabold hover:text-blue-400"><a href='/'> Arpit </a></h1>
+                            <Heading className="font-serif text-white ml-2 text-lg font-extrabold"><a href='/'> Arpit </a></Heading>
                         </Name>
                         <NavComponents className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end">
                             <div className="hidden sm:block">

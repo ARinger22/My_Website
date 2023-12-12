@@ -81,7 +81,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80vh;
+  height: 93%;
 `;
 
 const LeftHalf = styled.div`
@@ -106,11 +106,6 @@ const Skills = styled.h1`
     color: transparent;
 `;
 
-const styles = {
-    heading: {
-        fontSize: '15px',
-    }
-}
 export default function Home() {
     const openResume = () => {
         var newTab = window.open(resumeUrl, '_blank');
@@ -131,7 +126,7 @@ export default function Home() {
             if (j === 0) {
                 isDeleting = false;
                 i++;
-                if (i == words.length) {
+                if (i === words.length) {
                     i = 0;
                 }
             }
@@ -150,8 +145,8 @@ export default function Home() {
     }, []);
     
     return (
-        <>
-            <Container >
+        <div className='h-screen bg-gradient-to-b from-black to-gray-700' id="Home_page">
+            <Container>
                 <LeftHalf>
                     <ProfilePic>
                         <CircularMotion>
@@ -178,13 +173,13 @@ export default function Home() {
                 </RightHalf>
             </Container>
             <More className='flex items-center justify-center'>
-                <div className="mt-4 animate-bounce w-11 h-11 flex items-center justify-center bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-full">
+                <div className="animate-bounce w-11 h-11 flex items-center justify-center bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-full">
                     <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                     </svg>
                 </div>
             </More>
-        </>
+        </div>
     );
 }
 

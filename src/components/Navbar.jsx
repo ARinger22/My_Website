@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import logo from '../assets/my_logo.svg';
+import { Link } from 'react-scroll';
 
 const StickyNavbar = styled.nav`
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 100;
+  width: 100%;
 `;
 
 const slideInFromLeft = keyframes`
@@ -17,7 +19,7 @@ const slideInFromLeft = keyframes`
         transform: translateY(0);
         opacity: 1;
       }
-    `;
+`;
 
 const slideInFromRight = keyframes`
       from {
@@ -28,7 +30,7 @@ const slideInFromRight = keyframes`
         transform: translateY(0);
         opacity: 1;
       }
-    `;
+`;
 
 const slideInFromBottom = keyframes`
       from {
@@ -39,7 +41,7 @@ const slideInFromBottom = keyframes`
         transform: translateY(0);
         opacity: 1;
       }
-    `;
+`;
 
 const MobileMenu = styled.div`
     @media (max-width: 640px) {
@@ -102,7 +104,7 @@ export default function Navbar() {
     };
 
     return (
-        <StickyNavbar className='fixed'>
+        <StickyNavbar className="bg-gradient-to-b from-black to-gray-700" >
             <nav className="mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                     <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
@@ -113,11 +115,36 @@ export default function Navbar() {
                         <NavComponents className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end">
                             <div className="hidden sm:block">
                                 <div className="flex space-x-4">
-                                    <a href="/" className="text-white rounded-md px-3 py-2 text-large font-medium hover:border-b-2 hover:border-blue-400 hover:text-blue-400" aria-current="page">Home</a>
-                                    <a href="/about" className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium">About</a>
-                                    <a href="/experience" className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium">Experience</a>
-                                    <a href="/projects" className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium">Projects</a>
-                                    <a href="/contact" className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium">Contact</a>
+                                    <Link to="Home_page" 
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-70} 
+                                        duration={500}
+                                        className="text-white rounded-md px-3 py-2 text-large font-medium hover:border-b-2 hover:border-blue-400 hover:text-blue-400 cursor-pointer" aria-current="page">Home</Link>
+                                    <Link to="About_page" 
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-70}
+                                        duration={500} 
+                                        className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium cursor-pointer">About</Link>
+                                    <Link to="Experience_page" 
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-70}
+                                        duration={500} 
+                                        className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium cursor-pointer">Experience</Link>
+                                    <Link to="Project_page" 
+                                    spy={true}
+                                        smooth={true}
+                                        offset={-70}
+                                        duration={500} 
+                                        className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium cursor-pointer">Projects</Link>
+                                    <Link to="Contact_page" 
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-70}
+                                        duration={500} 
+                                        className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium cursor-pointer">Contact</Link>
                                 </div>
                             </div>
                         </NavComponents>
@@ -187,11 +214,36 @@ export default function Navbar() {
                 {isMobileMenuOpen &&
                     <MobileMenu className="sm:hidden bg-gray-1000" id="mobile-menu">
                         <div className="">
-                            <a href="/" className="text-white rounded-md px-1 py-1 text-large font-medium hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2" aria-current="page">Home</a>
-                            <a href="/about" className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium">About</a>
-                            <a href="/experience" className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium">Experience</a>
-                            <a href="/projects" className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium">Projects</a>
-                            <a href="/contact" className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium">Contact</a>
+                            <Link to="Home_page" 
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500} 
+                                className="text-white rounded-md px-1 py-1 text-large font-medium hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 cursor-pointer" aria-current="page">Home</Link>
+                            <Link to="About_page" 
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500} 
+                                className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium cursor-pointer">About</Link>
+                            <Link to="Experience_page" 
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500} 
+                                className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium cursor-pointer">Experience</Link>
+                            <Link to="Project_page" 
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500} 
+                                className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium cursor-pointer">Projects</Link>
+                            <Link to="Contact_page" 
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500} 
+                                className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium cursor-pointer">Contact</Link>
                         </div>
                     </MobileMenu>
                 }

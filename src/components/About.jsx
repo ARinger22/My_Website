@@ -42,7 +42,7 @@ export default function About() {
   return (
     <div className='h-5500 flex items-center justify-center bg-gradient-to-b from-black to-gray-700' id="About_page" >
       <div className='flex-row mt-16 mb-16' >
-        <div className="flex flex-col items-center bg-gradient-to-r border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700" >
+        <div className="flex flex-col items-center bg-gradient-to-r border border-purple-400 rounded-lg shadow md:flex-row hover:bg-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700" >
           <div className="mx-3 overflow-hidden rounded-full border-4 border-white shadow-md">
             <ProfilePic src={image} alt="profile" className="w-64 h-64 rounded-full" />
           </div>

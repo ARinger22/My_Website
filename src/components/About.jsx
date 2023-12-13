@@ -12,62 +12,22 @@ import solidity from '../assets/solidity.svg'
 import tailwindcss from '../assets/tailwind-css-2.svg'
 import chash from '../assets/c--4.svg'
 import SkillCard from './SkillCard';
-
-const slideInFromLeft = keyframes`
-      from {
-        transform: translateX(-50px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-`;
-
-const slideInFromRight = keyframes`
-      from {
-        transform: translateX(50px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-`;
-
-const slideInFromTop = keyframes`
-      from {
-        transform: translateY(-50px);
-        opacity: 0;
-      }
-      to {
-        transform: translateX(0);
-        opacity: 1;
-      }
-`;
+import { slideInFromLeft, slideInFromRight, gradientOverlay} from './Slide'
 
 const ProfilePic = styled.img`
-  animation : ${slideInFromLeft} 0.1s ease-in-out;
+  animation : ${slideInFromLeft} 0.2s ease-in-out;
 `;
 const Info = styled.div`
-  animation: ${slideInFromRight} 0.1s ease-in-out;
+  animation: ${slideInFromRight} 0.2s ease-in-out;
+`;
+
+const Skill = styled.div`
+  animation : ${slideInFromLeft} 0.2s ease-in-out;
 `;
 
 const gradientAnimation = {
   position: 'relative',
   overflow: 'hidden',
-};
-
-const gradientOverlay = {
-  content: '',
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  width: '100%',
-  height: '100%',
-  background: 'linear-gradient(to bottom right, transparent 0%, transparent 33%, fuchsia , transparent 55%, red , transparent 75%, yellow 100%)',
-  transform: 'translateX(-100%)',
-  transition: 'transform 2s ease',
 };
 
 const handleHover = (event) => {
@@ -81,8 +41,8 @@ const handleMouseLeave = (event) => {
 export default function About() {
   return (
     <div className='h-5500 flex items-center justify-center bg-gradient-to-b from-black to-gray-700' id="About_page" >
-      <div className='flex-row mt-16 mb-16 ' >
-        <div className="flex flex-col items-center bg-dark border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700" >
+      <div className='flex-row mt-16 mb-16' >
+        <div className="flex flex-col items-center bg-gradient-to-r border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700" >
           <div className="mx-3 overflow-hidden rounded-full border-4 border-white shadow-md">
             <ProfilePic src={image} alt="profile" className="w-64 h-64 rounded-full" />
           </div>
@@ -109,9 +69,9 @@ export default function About() {
               onMouseLeave={handleMouseLeave}
             >
               <div style={gradientOverlay}></div>
-              <div className='bg-gradient-to-r'>
+              <Skill className='bg-gradient-to-r'>
                 <SkillCard color="#FFCE14" imgSrc={python} altText="Python" title="Python" />
-              </div>
+              </Skill>
             </div>
             <div
               className='rounded-lg'
@@ -120,9 +80,9 @@ export default function About() {
               onMouseLeave={handleMouseLeave}
             >
               <div style={gradientOverlay}></div>
-              <div className='bg-gradient-to-r'>
+              <Skill className='bg-gradient-to-r'>
                 <SkillCard color="#5C6BC0" imgSrc={clang} altText="C" title="C" />
-              </div>
+              </Skill>
             </div>
             <div
               className='rounded-lg'
@@ -131,9 +91,9 @@ export default function About() {
               onMouseLeave={handleMouseLeave}
             >
               <div style={gradientOverlay}></div>
-              <div className='bg-gradient-to-r'>
+              <Info className='bg-gradient-to-r'>
                 <SkillCard color="#659AD2" imgSrc={c2lang} altText="C++" title="C++" />
-              </div>
+              </Info>
             </div>
             <div
               className='rounded-lg'
@@ -142,9 +102,9 @@ export default function About() {
               onMouseLeave={handleMouseLeave}
             >
               <div style={gradientOverlay}></div>
-              <div className='bg-gradient-to-r'>
+              <Info className='bg-gradient-to-r'>
                 <SkillCard color="#61DAFB" imgSrc={chash} altText="C#" title="C#" />
-              </div>
+              </Info>
             </div>
             <div
               className='rounded-lg'
@@ -153,9 +113,9 @@ export default function About() {
               onMouseLeave={handleMouseLeave}
             >
               <div style={gradientOverlay}></div>
-              <div className='bg-gradient-to-r'>
+              <Skill className='bg-gradient-to-r'>
                 <SkillCard color="#fefe01" imgSrc={javascript} altText="JavaScript" title="JavaScript" />
-              </div>
+              </Skill>
             </div>
             <div
               className='rounded-lg'
@@ -164,9 +124,9 @@ export default function About() {
               onMouseLeave={handleMouseLeave}
             >
               <div style={gradientOverlay}></div>
-              <div className='bg-gradient-to-r'>
+              <Skill className='bg-gradient-to-r'>
                 <SkillCard color="#F44336" imgSrc={solidity} altText="solidity" title="solidity" />
-              </div>
+              </Skill>
             </div>
             <div
               className='rounded-lg'
@@ -175,9 +135,9 @@ export default function About() {
               onMouseLeave={handleMouseLeave}
             >
               <div style={gradientOverlay}></div>
-              <div className='bg-gradient-to-r'>
+              <Info className='bg-gradient-to-r'>
                 <SkillCard color="#00B871" imgSrc={postgres} altText="postgres" title="postgres" />
-              </div>
+              </Info>
             </div>
             <div
               className='rounded-lg'
@@ -186,9 +146,9 @@ export default function About() {
               onMouseLeave={handleMouseLeave}
             >
               <div style={gradientOverlay}></div>
-              <div className='bg-gradient-to-r'>
+              <Info className='bg-gradient-to-r'>
                 <SkillCard color="#fc4503" imgSrc={reactjs} altText="reactjs" title="reactjs" />
-              </div>
+              </Info>
             </div>
             <div
               className='rounded-lg'
@@ -197,9 +157,9 @@ export default function About() {
               onMouseLeave={handleMouseLeave}
             >
               <div style={gradientOverlay}></div>
-              <div className='bg-gradient-to-r'>
+              <Skill className='bg-gradient-to-r'>
                 <SkillCard color="#1B73BA" imgSrc={nodejs} altText="nodejs" title="nodejs" />
-              </div>
+              </Skill>
             </div>
             <div
               className='rounded-lg'
@@ -208,9 +168,9 @@ export default function About() {
               onMouseLeave={handleMouseLeave}
             >
               <div style={gradientOverlay}></div>
-              <div className='bg-gradient-to-r'>
+              <Skill className='bg-gradient-to-r'>
                 <SkillCard color="#18B5B9" imgSrc={tailwindcss} altText="Tailwind" title="Tailwind" />
-              </div>
+              </Skill>
             </div>
           </div>
         </div>

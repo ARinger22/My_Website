@@ -2,39 +2,7 @@ import React, { useEffect } from 'react';
 import resumeUrl from '../assets/resume_cg.pdf';
 import profile from '../assets/profile_image.jpeg';
 import styled, { keyframes } from 'styled-components';
-
-const slideInFromLeft = keyframes`
-      from {
-        transform: translateX(-100px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    `;
-
-const slideInFromRight = keyframes`
-      from {
-        transform: translateX(100px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    `;
-
-const slideInFromBottom = keyframes`
-      from {
-        transform: translateY(50px);
-        opacity: 0;
-      }
-      to {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    `;
+import { slideInFromLeft, slideInFromRight, slideInFromBottom, Heading, Skills } from './Slide'
 
 const More = styled.div`
   animation: ${slideInFromBottom} 0.1s ease-in-out;
@@ -92,18 +60,6 @@ const LeftHalf = styled.div`
 const RightHalf = styled.div`
   width: 100%;
   text-align: center;
-`;
-
-const Heading = styled.span`
-    background: linear-gradient(90deg, #2563eb, #48bb78, #6366f1);
-    -webkit-background-clip: text;
-    color: transparent;
-`;
-
-const Skills = styled.h1`
-    background: linear-gradient(90deg, fuchsia, red, yellow);
-    -webkit-background-clip: text;
-    color: transparent;
 `;
 
 export default function Home() {

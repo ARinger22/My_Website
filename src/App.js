@@ -4,6 +4,7 @@ import Experience from './components/Experience'
 import Projects from './components/Projects'
 import About from './components/About'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 import {
   BrowserRouter as Router, Routes, Route
@@ -18,10 +19,9 @@ function App() {
       <Experience />
       <Projects />
       <Contact />
+      <Footer />
     </div>
   );
 }
-
-// <img src={logo} className="App-logo" alt="logo" />
 
 export default App;

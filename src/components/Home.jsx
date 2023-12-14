@@ -106,7 +106,7 @@ export default function Home() {
                 <LeftHalf>
                     <ProfilePic>
                         <CircularMotion>
-                            <div className="circular-motion overflow-hidden rounded-full border-4 border-white shadow-md">
+                <div className="circular-motion overflow-hidden rounded-full border-4 border-white shadow-md cursor-pointer">
                                 <img src={profile} alt="profile" className="w-full h-full object-cover rounded-full" />
                             </div>
                         </CircularMotion>

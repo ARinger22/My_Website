@@ -35,3 +35,41 @@ export function SkillCard2({ time, imgSrc, altText, title }) {
         </div>
     );
 }
+
+export function SkillCard3({imgSrc, altText, title , info}) {
+    return (
+        <div className={`border border-grey-900 rounded-lg shadow`} >
+            <div className="relative group overflow-hidden">
+                <img
+                    src={imgSrc}
+                    alt={altText}
+                    className="mx-auto w-full rounded-lg h-80 object-contain "
+                />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="text-white text-center">
+                        <h2 className="text-xl font-bold mb-2">{title}</h2>
+                        <p>{info}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export function Card ({ imgSrc, altText, title, info }) {
+    return (
+        <div className="relative group overflow-hidden">
+            <img
+                src={imgSrc}
+                alt={altText}
+                className="object-cover object-center mx-auto w-80 h-80 group-hover:opacity-50 transition-opacity duration-300"
+            />
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="text-white text-center">
+                    <h2 className="text-xl font-bold mb-2">{title}</h2>
+                    <p>{info}</p>
+                </div>
+            </div>
+        </div>
+    );
+};

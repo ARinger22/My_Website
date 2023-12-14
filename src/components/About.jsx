@@ -15,14 +15,14 @@ import SkillCard from './SkillCard';
 import { slideInFromLeft, slideInFromRight, gradientOverlay} from './Slide'
 
 const ProfilePic = styled.img`
-  animation : ${slideInFromLeft} 0.2s ease-in-out;
+  animation : ${slideInFromLeft} 0.3s ease-in-out;
 `;
 const Info = styled.div`
-  animation: ${slideInFromRight} 0.2s ease-in-out;
+  animation: ${slideInFromRight} 0.3s ease-in-out;
 `;
 
 const Skill = styled.div`
-  animation : ${slideInFromLeft} 0.2s ease-in-out;
+  animation : ${slideInFromLeft} 0.3s ease-in-out;
 `;
 
 const gradientAnimation = {
@@ -44,7 +44,7 @@ export default function About() {
       <div className='flex-row mt-16 mb-16' >
         <div className="flex flex-col items-center bg-gradient-to-r border border-purple-400 rounded-lg shadow md:flex-row hover:bg-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700" >
           <div className="mx-3 overflow-hidden rounded-full border-4 border-white shadow-md">
-            <ProfilePic src={image} alt="profile" className="w-64 h-64 rounded-full" />
+            <ProfilePic src={image} alt="profile" className="w-64 h-64 rounded-full cursor-pointer" />
           </div>
           <Info className="flex flex-col justify-between p-4 leading-normal">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-blue-500 dark:text-white">I'm Arpit Kumar Gautam</h5>
@@ -63,7 +63,7 @@ export default function About() {
           <h1 className='flex mt-4 items-center justify-center text-blue-600 text-5xl font-bold text-white'>Skills</h1>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
             <div
-              className='rounded-lg'
+              className='rounded-lg cursor-pointer'
               style={gradientAnimation}
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseLeave}
@@ -74,7 +74,7 @@ export default function About() {
               </Skill>
             </div>
             <div
-              className='rounded-lg'
+              className='rounded-lg cursor-pointer'
               style={gradientAnimation}
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseLeave}
@@ -85,7 +85,7 @@ export default function About() {
               </Skill>
             </div>
             <div
-              className='rounded-lg'
+              className='rounded-lg cursor-pointer'
               style={gradientAnimation}
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseLeave}
@@ -96,7 +96,7 @@ export default function About() {
               </Info>
             </div>
             <div
-              className='rounded-lg'
+              className='rounded-lg cursor-pointer'
               style={gradientAnimation}
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseLeave}
@@ -107,7 +107,7 @@ export default function About() {
               </Info>
             </div>
             <div
-              className='rounded-lg'
+              className='rounded-lg cursor-pointer'
               style={gradientAnimation}
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseLeave}
@@ -118,7 +118,7 @@ export default function About() {
               </Skill>
             </div>
             <div
-              className='rounded-lg'
+              className='rounded-lg cursor-pointer'
               style={gradientAnimation}
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseLeave}
@@ -129,7 +129,7 @@ export default function About() {
               </Skill>
             </div>
             <div
-              className='rounded-lg'
+              className='rounded-lg cursor-pointer'
               style={gradientAnimation}
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseLeave}
@@ -140,7 +140,7 @@ export default function About() {
               </Info>
             </div>
             <div
-              className='rounded-lg'
+              className='rounded-lg cursor-pointer'
               style={gradientAnimation}
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseLeave}
@@ -151,7 +151,7 @@ export default function About() {
               </Info>
             </div>
             <div
-              className='rounded-lg'
+              className='rounded-lg cursor-pointer'
               style={gradientAnimation}
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseLeave}
@@ -162,7 +162,7 @@ export default function About() {
               </Skill>
             </div>
             <div
-              className='rounded-lg'
+              className='rounded-lg cursor-pointer'
               style={gradientAnimation}
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseLeave}

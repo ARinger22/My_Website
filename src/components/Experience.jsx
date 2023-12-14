@@ -28,8 +28,8 @@ export default function Experience() {
     <div className='h-5500 flex items-center justify-center bg-gradient-to-b from-black to-gray-700' id="Experience_page">
       <div className=''>
         <h1 className='flex mt-4 justify-center text-blue-600 text-5xl font-bold text-white mt-10'>Experiences</h1>
-        <div className='flex-row mt-16 mb-16' >
-          <Skill className="flex flex-col items-center bg-gradient-to-r border border-purple-400 rounded-lg shadow md:flex-row hover:bg-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700" >
+        <div className='flex-row mt-16 mb-16 hover:bg-gradient-to-r' >
+          <Skill className="flex flex-col items-center bg-gradient-to-r border border-purple-400 rounded-lg shadow md:flex-row hover:bg-gray-900 dark:border-gray-700 dark:bg-gray-800" >
             <div className="mx-3 overflow-hidden rounded-full border-4 border-white shadow-md">
               <img src={mentorsity} alt="mentorsity" className="w-40 h-40 rounded-full" />
             </div>

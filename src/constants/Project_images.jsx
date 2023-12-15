@@ -7,6 +7,8 @@ const images = {
     blockchain: require('../Project_Images/blockchain.png'),   
     note_bot : require('../Project_Images/Note_Bot.jpeg'),
     xv6 : require('../Project_Images/xv6.jpeg'),
+    QLearning : require('../Project_Images/Q-Learning.png'),
+    steam: require('../Project_Images/steam.png'),
 };
 
 export default images;

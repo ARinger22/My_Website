@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { slideInFromLeft, slideInFromRight } from './Slide'
 import mentorsity from '../assets/mentorsity.jpeg'
 import automotive from '../assets/automotive.png'
@@ -26,7 +26,7 @@ const ProfilePic = styled.img`
 export default function Experience() {
   return (
     <div className='h-5500 flex items-center justify-center bg-gradient-to-b from-black to-gray-700' id="Experience_page">
-      <div className=''>
+      <div className='mx-10'>
         <h1 className='flex mt-4 justify-center text-blue-600 text-5xl font-bold  mt-10'>Experiences</h1>
         <div className='flex-row mt-16 mb-16 hover:bg-gradient-to-r' >
           <Skill className="flex flex-col items-center bg-gradient-to-r border border-purple-400 rounded-lg shadow md:flex-row hover:bg-gray-900 dark:border-gray-700 dark:bg-gray-800" >

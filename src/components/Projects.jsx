@@ -1,18 +1,17 @@
 import React from 'react'
-import { SkillCard3 } from './SkillCard'
 import image from '../constants/Project_images'
 import Projectcard from '../constants/Project_card';
+import Lang_images from '../constants/Lang_images'
 
 export default function Projects() {
-  let language = [];
   let projects = [
     {
       imgSrc: image.machine,
       altText: "machine",
       title: "Handwritten Digit Predictor",
       description: 'Website | Machine Learning Model',
-      info: "Additional information about the card goes here.",
-      languages: 'html , css, javascript',
+      info: "model to predict the hand written digits ",
+      languages: [Lang_images.python, Lang_images.html, Lang_images.javascript],
     },
     {
       imgSrc: image.gui,
@@ -20,6 +19,7 @@ export default function Projects() {
       title: "RISC-V Simulator",
       description: 'Course Project | Data Structure',
       info: "Additional information about the card goes here.",
+      languages: [Lang_images.python, Lang_images.clang, Lang_images.c2lang],
     },
     {
       imgSrc: image.cycle,
@@ -27,20 +27,23 @@ export default function Projects() {
       title: "Cycle Theft Model",
       description: 'Hackathon Project | Machine Learning',
       info: "Additional information about the card goes here.",
+      languages : [Lang_images.python, Lang_images.opencv, Lang_images.colab]
     },
     {
       imgSrc: image.note_bot,
-      altText: "commercial",
-      title: "Store App",
-      description: 'Android Application | Commercial',
-      info: "Additional information about the card goes here.",
+      altText: "noteapp",
+      title: "Notes App",
+      description: 'Android Application | Notes Bot',
+      info: "Mobile Application to add the notes.",
+      languages: [Lang_images.reactjs, Lang_images.nodejs],
     },
     {
       imgSrc: image.blockchain,
-      altText: "commercial",
-      title: "Store App",
-      description: 'Android Application | Commercial',
+      altText: "Blockchain",
+      title: "IOT Blockchain",
+      description: 'Website | Blockchain Security',
       info: "Additional information about the card goes here.",
+      languages: [Lang_images.python, Lang_images.solidity, Lang_images.reactjs],
     },
     {
       imgSrc: image.commercial,
@@ -48,27 +51,47 @@ export default function Projects() {
       title: "Store App",
       description: 'Android Application | Commercial',
       info: "Additional information about the card goes here.",
+      languages: [Lang_images.reactjs, Lang_images.redux],
+    },
+    {
+      imgSrc: image.steam,
+      altText: "Steam",
+      title: "Steam Database",
+      description: 'Backend | Store Games & Authors',
+      info: "Additional information about the card goes here.",
+      languages: [Lang_images.postgres, Lang_images.python, Lang_images.javascript],
     },
     {
       imgSrc: image.automotive,
-      altText: "commercial",
-      title: "Store App",
-      description: 'Android Application | Commercial',
+      altText: "Automotive",
+      title: "IIT Ropar Club Website",
+      description: 'Website | Club Activities',
       info: "Additional information about the card goes here.",
+      languages: [Lang_images.html, Lang_images.css, Lang_images.javascript],
     },
     {
       imgSrc: '',
-      altText: "commercial",
+      altText: "Script",
       title: "WhatsApp Automation",
-      description: 'Automation Script | To Send WhatsApp Messages',
+      description: 'Python Script | To Send WhatsApp Messages',
       info: "Additional information about the card goes here.",
+      languages: [Lang_images.python, Lang_images.selenium],
     },
     {
       imgSrc: image.xv6,
-      altText: "commercial",
-      title: "Store App",
-      description: 'Android Application | Commercial',
+      altText: "xv5",
+      title: "XV6 Update",
+      description: 'Course Project | Commands Added',
       info: "Additional information about the card goes here.",
+      languages: [Lang_images.clang],
+    },
+    {
+      imgSrc: image.QLearning,
+      altText: "QLearning",
+      title: "QLearning Algo",
+      description: 'Course Project | Reinforcement Learning',
+      info: "Additional information about the card goes here.",
+      languages: ['html', 'css', 'javascript'],
     }
   ]
 

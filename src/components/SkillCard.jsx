@@ -36,21 +36,39 @@ export function SkillCard2({ time, imgSrc, altText, title }) {
     );
 }
 
-export function SkillCard3({imgSrc, altText, title , info}) {
+export function SkillCard3({imgSrc, altText, title , info, description, languages}) {
     return (
-        <div className={`border border-grey-900 rounded-lg shadow`} >
+        <div className={`mb-2 border border-sky-900 rounded-lg shadow`} >
             <div className="relative group overflow-hidden">
                 <img
                     src={imgSrc}
                     alt={altText}
-                    className="mx-auto w-full rounded-lg h-80 object-contain "
+                    className="mx-auto w-full rounded-lg h-60 object-cover"
                 />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="text-white text-center">
-                        <h2 className="text-xl font-bold mb-2">{title}</h2>
+                        <Skills className="text-3xl font-bold mb-2">{title}</Skills>
+                        <h2 className="text-2xl font-bold mb-2" style={{ color: '#51E2F5' }}>{description}</h2>
                         <p>{info}</p>
                     </div>
-                </div>
+                    {/* <div className='mt-1 grid grid-cols-8'>
+                        <img
+                            src={reactjs}
+                            alt="reactjs"
+                            className="mx-auto w-10 h-10 object-contain"
+                        />
+                        <img
+                            src={nodejs}
+                            alt="nodejs"
+                            className="mx-auto w-10 h-10 object-contain"
+                        />
+                        <img
+                            src={postgres}
+                            alt="postgres"
+                            className="mx-auto w-10 h-10 object-contain"
+                        />
+                    </div> */}
+                </div>  
             </div>
         </div>
     );

@@ -60,7 +60,7 @@ export default function About() {
           </Info>
         </div>
         <div>
-          <h1 className='flex mt-4 items-center justify-center text-blue-600 text-5xl font-bold text-white'>Skills</h1>
+          <h1 className='flex mt-4 items-center justify-center text-blue-600 text-5xl font-bold '>Skills</h1>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
             <div
               className='rounded-lg cursor-pointer'

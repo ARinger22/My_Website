@@ -1,7 +1,6 @@
 import React from 'react'
 import image from '../constants/Project_images'
 import Projectcard from '../constants/Project_card';
-import Lang_images from '../constants/Lang_images'
 
 export default function Projects() {
   let projects = [
@@ -11,7 +10,7 @@ export default function Projects() {
       title: "Handwritten Digit Predictor",
       description: 'Website | Machine Learning Model',
       info: "model to predict the hand written digits ",
-      languages: [Lang_images.python, Lang_images.html, Lang_images.javascript],
+      languages: ['python', 'html', 'javascript'],
     },
     {
       imgSrc: image.gui,
@@ -19,7 +18,7 @@ export default function Projects() {
       title: "RISC-V Simulator",
       description: 'Course Project | Data Structure',
       info: "Additional information about the card goes here.",
-      languages: [Lang_images.python, Lang_images.clang, Lang_images.c2lang],
+      languages: ['python', 'clang', 'c2lang'],
     },
     {
       imgSrc: image.cycle,
@@ -27,7 +26,7 @@ export default function Projects() {
       title: "Cycle Theft Model",
       description: 'Hackathon Project | Machine Learning',
       info: "Additional information about the card goes here.",
-      languages : [Lang_images.python, Lang_images.opencv, Lang_images.colab]
+      languages : ['python', 'opencv', 'colab']
     },
     {
       imgSrc: image.note_bot,
@@ -35,7 +34,7 @@ export default function Projects() {
       title: "Notes App",
       description: 'Android Application | Notes Bot',
       info: "Mobile Application to add the notes.",
-      languages: [Lang_images.reactjs, Lang_images.nodejs],
+      languages: ['reactjs', 'nodejs'],
     },
     {
       imgSrc: image.blockchain,
@@ -43,7 +42,7 @@ export default function Projects() {
       title: "IOT Blockchain",
       description: 'Website | Blockchain Security',
       info: "Additional information about the card goes here.",
-      languages: [Lang_images.python, Lang_images.solidity, Lang_images.reactjs],
+      languages: ['python', 'solidity', 'reactjs'],
     },
     {
       imgSrc: image.commercial,
@@ -51,7 +50,7 @@ export default function Projects() {
       title: "Store App",
       description: 'Android Application | Commercial',
       info: "Additional information about the card goes here.",
-      languages: [Lang_images.reactjs, Lang_images.redux],
+      languages: ['reactjs', 'redux'],
     },
     {
       imgSrc: image.steam,
@@ -59,7 +58,7 @@ export default function Projects() {
       title: "Steam Database",
       description: 'Backend | Store Games & Authors',
       info: "Additional information about the card goes here.",
-      languages: [Lang_images.postgres, Lang_images.python, Lang_images.javascript],
+      languages: ['postgres', 'python', 'javascript'],
     },
     {
       imgSrc: image.automotive,
@@ -67,7 +66,7 @@ export default function Projects() {
       title: "IIT Ropar Club Website",
       description: 'Website | Club Activities',
       info: "Additional information about the card goes here.",
-      languages: [Lang_images.html, Lang_images.css, Lang_images.javascript],
+      languages: ['html', 'css', 'javascript'],
     },
     {
       imgSrc: '',
@@ -75,7 +74,7 @@ export default function Projects() {
       title: "WhatsApp Automation",
       description: 'Python Script | To Send WhatsApp Messages',
       info: "Additional information about the card goes here.",
-      languages: [Lang_images.python, Lang_images.selenium],
+      languages: ['python', 'selenium'],
     },
     {
       imgSrc: image.xv6,
@@ -83,7 +82,7 @@ export default function Projects() {
       title: "XV6 Update",
       description: 'Course Project | Commands Added',
       info: "Additional information about the card goes here.",
-      languages: [Lang_images.clang],
+      languages: ['clang'],
     },
     {
       imgSrc: image.QLearning,
@@ -91,7 +90,7 @@ export default function Projects() {
       title: "QLearning Algo",
       description: 'Course Project | Reinforcement Learning',
       info: "Additional information about the card goes here.",
-      languages: ['html', 'css', 'javascript'],
+      languages: ['python'],
     }
   ]
 

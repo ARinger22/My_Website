@@ -1,5 +1,6 @@
 import React from 'react'
 import { Skills } from './Slide';
+import Lang_images from '../constants/Lang_images';
 
 export default function SkillCard({ color, imgSrc, altText, title }) {
     return (
@@ -36,7 +37,8 @@ export function SkillCard2({ time, imgSrc, altText, title }) {
     );
 }
 
-export function SkillCard3({imgSrc, altText, title , info, description, languages}) {
+export function SkillCard3({ imgSrc, altText, title, info, description, languages }) {
+    // console.log(languages[0])
     return (
         <div className={`mb-2 border border-sky-900 rounded-lg shadow`} >
             <div className="relative group overflow-hidden">
@@ -50,31 +52,24 @@ export function SkillCard3({imgSrc, altText, title , info, description, language
                         <Skills className="text-3xl font-bold mb-2">{title}</Skills>
                         <h2 className="text-2xl font-bold " style={{ color: '#51E2F5' }}>{description}</h2>
                         <p className='text-xl font-bold text-rose-600' >{info}</p>
+                        <div className='mt-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+                            {languages.map((lang, index) => {
+                                return (
+                                    <div key={index}>
+                                        {Lang_images[lang]} {/* Directly use the component */}
+                                    </div>
+                                )
+                            })
+                            }
+                        </div>
                     </div>
-                    {/* <div className='mt-1 grid grid-cols-8'>
-                        <img
-                            src={reactjs}
-                            alt="reactjs"
-                            className="mx-auto w-10 h-10 object-contain"
-                        />
-                        <img
-                            src={nodejs}
-                            alt="nodejs"
-                            className="mx-auto w-10 h-10 object-contain"
-                        />
-                        <img
-                            src={postgres}
-                            alt="postgres"
-                            className="mx-auto w-10 h-10 object-contain"
-                        />
-                    </div> */}
-                </div>  
+                </div>
             </div>
         </div>
     );
 }
 
-export function Card ({ imgSrc, altText, title, info }) {
+export function Card({ imgSrc, altText, title, info }) {
     return (
         <div className="relative group overflow-hidden">
             <img

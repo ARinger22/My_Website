@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import logo from '../assets/my_logo.svg';
-import { a } from 'react-scroll';
 
 const StickyNavbar = styled.nav`
   position: fixed;
@@ -123,36 +122,36 @@ export default function Navbar() {
                             <div className="hidden sm:block">
                                 <div className="flex space-x-4">
                                     <a href="/"
-                                        spy={true}
-                                        smooth={true}
+
+
                                         offset={-70}
                                         duration={500}
                                         className="text-white rounded-md px-3 py-2 text-large font-medium hover:border-b-2 hover:border-blue-400 hover:text-blue-400 cursor-pointer" aria-current="page">Home</a>
                                     {<a href="#About_page"
                                         onClick={() => handleLinkClick("About_page")}
-                                        spy={true}
-                                        smooth={true}
+
+
                                         offset={-70}
                                         duration={500}
                                         className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium cursor-pointer">About</a>}
                                     <a href="#Experience_page"
                                         onClick={() => handleLinkClick("About_page")}
-                                        spy={true}
-                                        smooth={true}
+
+
                                         offset={-70}
                                         duration={500}
                                         className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium cursor-pointer">Experience</a>
                                     <a href="#Project_page"
                                         onClick={() => handleLinkClick("About_page")}
-                                        spy={true}
-                                        smooth={true}
+
+
                                         offset={-70}
                                         duration={500}
                                         className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium cursor-pointer">Projects</a>
                                     <a href="#Contact_page"
                                         onClick={() => handleLinkClick("About_page")}
-                                        spy={true}
-                                        smooth={true}
+
+
                                         offset={-70}
                                         duration={500}
                                         className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium cursor-pointer">Contact</a>
@@ -226,32 +225,32 @@ export default function Navbar() {
                     <MobileMenu className="sm:hidden bg-gray-1000" id="mobile-menu">
                         <div className="">
                             <a href="Home_page"
-                                spy={true}
-                                smooth={true}
+
+
                                 offset={-70}
                                 duration={500}
                                 className="text-white rounded-md px-1 py-1 text-large font-medium hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 cursor-pointer" aria-current="page">Home</a>
                             <a href="About_page"
-                                spy={true}
-                                smooth={true}
+
+
                                 offset={-70}
                                 duration={500}
                                 className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium cursor-pointer">About</a>
                             <a href="Experience_page"
-                                spy={true}
-                                smooth={true}
+
+
                                 offset={-70}
                                 duration={500}
                                 className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium cursor-pointer">Experience</a>
                             <a href="Project_page"
-                                spy={true}
-                                smooth={true}
+
+
                                 offset={-70}
                                 duration={500}
                                 className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium cursor-pointer">Projects</a>
                             <a href="Contact_page"
-                                spy={true}
-                                smooth={true}
+
+
                                 offset={-70}
                                 duration={500}
                                 className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium cursor-pointer">Contact</a>

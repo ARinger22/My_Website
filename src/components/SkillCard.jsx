@@ -40,7 +40,7 @@ export function SkillCard2({ time, imgSrc, altText, title }) {
 export function SkillCard3({ imgSrc, altText, title, info, description, languages }) {
     // console.log(languages[0])
     return (
-        <div className={`mb-2 border border-sky-900 rounded-lg shadow`} >
+        <div className={`mb-2 border border-sky-900 rounded-lg shadow`} data-aos="zoom-in-out" >
             <div className="relative group overflow-hidden">
                 <img
                     src={imgSrc}

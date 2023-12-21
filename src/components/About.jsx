@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import image from '../assets/my_image.png';
 import styled from 'styled-components';
 import python from '../assets/python-5.svg'
@@ -39,14 +41,18 @@ const handleMouseLeave = (event) => {
 };
 
 export default function About() {
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
     <div className='h-5500 flex items-center justify-center bg-gradient-to-b from-black to-gray-700' id="About_page" >
-      <div className='mx-10 flex-row mt-16 mb-16' >
+      <div className='mx-10 flex-row mt-16 mb-16' data-aos="fade-up">
         <div className="flex flex-col items-center bg-gradient-to-r border border-purple-400 rounded-lg shadow md:flex-row hover:bg-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700" >
-          <div className="mx-3 overflow-hidden rounded-full border-4 border-white shadow-md">
+          <div className="mx-3 overflow-hidden rounded-full border-4 border-white shadow-md" data-aos="fade-right">
             <ProfilePic src={image} alt="profile" className="w-64 h-64 rounded-full cursor-pointer" />
           </div>
-          <Info className="flex flex-col justify-between p-4 leading-normal">
+          <Info className="flex flex-col justify-between p-4 leading-normal" data-aos="fade-left">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-blue-500 dark:text-white">I'm Arpit Kumar Gautam</h5>
             <p className="mb-3 font-bold text-white dark:text-gray-400"> I am currently pursuing my B.Tech in Computer Science from Indian Institute of Technology Ropar.<br />
               I gained a solid foundation in the principles and concepts of computer science.<br />
@@ -64,6 +70,7 @@ export default function About() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
             <div
               className='rounded-lg cursor-pointer'
+              data-aos="fade-right"
               style={gradientAnimation}
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseLeave}
@@ -75,6 +82,7 @@ export default function About() {
             </div>
             <div
               className='rounded-lg cursor-pointer'
+              data-aos="fade-right"
               style={gradientAnimation}
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseLeave}
@@ -86,6 +94,7 @@ export default function About() {
             </div>
             <div
               className='rounded-lg cursor-pointer'
+              data-aos="fade-left"
               style={gradientAnimation}
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseLeave}
@@ -97,6 +106,7 @@ export default function About() {
             </div>
             <div
               className='rounded-lg cursor-pointer'
+              data-aos="fade-left"
               style={gradientAnimation}
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseLeave}
@@ -108,6 +118,7 @@ export default function About() {
             </div>
             <div
               className='rounded-lg cursor-pointer'
+              data-aos="fade-right"
               style={gradientAnimation}
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseLeave}
@@ -119,6 +130,7 @@ export default function About() {
             </div>
             <div
               className='rounded-lg cursor-pointer'
+              data-aos="fade-right"
               style={gradientAnimation}
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseLeave}
@@ -130,6 +142,7 @@ export default function About() {
             </div>
             <div
               className='rounded-lg cursor-pointer'
+              data-aos="fade-left"
               style={gradientAnimation}
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseLeave}
@@ -141,6 +154,7 @@ export default function About() {
             </div>
             <div
               className='rounded-lg cursor-pointer'
+              data-aos="fade-left"
               style={gradientAnimation}
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseLeave}
@@ -152,6 +166,7 @@ export default function About() {
             </div>
             <div
               className='rounded-lg cursor-pointer'
+              data-aos="fade-right"
               style={gradientAnimation}
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseLeave}
@@ -163,6 +178,7 @@ export default function About() {
             </div>
             <div
               className='rounded-lg cursor-pointer'
+              data-aos="fade-right"
               style={gradientAnimation}
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseLeave}

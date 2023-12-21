@@ -122,36 +122,26 @@ export default function Navbar() {
                             <div className="hidden sm:block">
                                 <div className="flex space-x-4">
                                     <a href="/"
-
-
                                         offset={-70}
                                         duration={500}
                                         className="text-white rounded-md px-3 py-2 text-large font-medium hover:border-b-2 hover:border-blue-400 hover:text-blue-400 cursor-pointer" aria-current="page">Home</a>
                                     {<a href="#About_page"
                                         onClick={() => handleLinkClick("About_page")}
-
-
                                         offset={-70}
                                         duration={500}
                                         className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium cursor-pointer">About</a>}
                                     <a href="#Experience_page"
                                         onClick={() => handleLinkClick("About_page")}
-
-
                                         offset={-70}
                                         duration={500}
                                         className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium cursor-pointer">Experience</a>
                                     <a href="#Project_page"
                                         onClick={() => handleLinkClick("About_page")}
-
-
                                         offset={-70}
                                         duration={500}
                                         className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium cursor-pointer">Projects</a>
                                     <a href="#Contact_page"
                                         onClick={() => handleLinkClick("About_page")}
-
-
                                         offset={-70}
                                         duration={500}
                                         className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium cursor-pointer">Contact</a>
@@ -224,33 +214,23 @@ export default function Navbar() {
                 {isMobileMenuOpen &&
                     <MobileMenu className="sm:hidden bg-gray-1000" id="mobile-menu">
                         <div className="">
-                            <a href="Home_page"
-
-
+                            <a href="/"
                                 offset={-70}
                                 duration={500}
                                 className="text-white rounded-md px-1 py-1 text-large font-medium hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 cursor-pointer" aria-current="page">Home</a>
-                            <a href="About_page"
-
-
+                            <a href="#About_page"
                                 offset={-70}
                                 duration={500}
                                 className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium cursor-pointer">About</a>
-                            <a href="Experience_page"
-
-
+                            <a href="#Experience_page"
                                 offset={-70}
                                 duration={500}
                                 className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium cursor-pointer">Experience</a>
-                            <a href="Project_page"
-
-
+                            <a href="#Project_page"
                                 offset={-70}
                                 duration={500}
                                 className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium cursor-pointer">Projects</a>
-                            <a href="Contact_page"
-
-
+                            <a href="#Contact_page"
                                 offset={-70}
                                 duration={500}
                                 className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium cursor-pointer">Contact</a>

@@ -64,7 +64,7 @@ export default function About() {
           <h5 className="text-2xl font-bold dark:text-white">I'm Arpit Kumar Gautam</h5>
           <div className="font-bold text-gray-300 flex flex-col gap-2">
             <p>
-              I am Arpit Kumar Gautam, currently pursuing my B.Tech in Computer Science and Engineering at the
+              I am Arpit Kumar Gautam, completed my B.Tech in Computer Science and Engineering at the
               Indian Institute of Technology, Ropar (2021-2025). Over the years, I have built a strong foundation
               in computer science, while exploring diverse areas like web development, app development, and machine learning.
             </p>

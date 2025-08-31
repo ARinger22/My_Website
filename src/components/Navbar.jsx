@@ -189,7 +189,7 @@ export default function Navbar() {
                                     </path>
                                 </svg>
                             </a>
-                            <a className='text-white hover:text-blue-400' target="_blank" rel="noreferrer" aria-label="a to contact me on Instagram" href="https://www.instagram.com/arpit.g_0224/">
+                            <a className='text-white hover:text-blue-400' target="_blank" rel="noreferrer" aria-label="a to contact me on Instagram" href="https://www.instagram.com/artverse224/">
                                 <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -211,7 +211,7 @@ export default function Navbar() {
                             <a href="/"
                                 offset={-70}
                                 duration={500}
-                                className="text-white rounded-md px-1 py-1 text-large font-medium hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 cursor-pointer" aria-current="page">Home</a>
+                                className="text-white rounded-md px-1 py-1 text-large font-medium hover:border-blue-400 hover:text-blue-400 hover:border-b-2 cursor-pointer" aria-current="page">Home</a>
                             <a href="#About_page"
                                 offset={-70}
                                 duration={500}

@@ -21,15 +21,15 @@ export default function Achievements() {
     {
       img: "achievements/codechef.png",
       title: "CodeChef",
-      year: "2022",
+      year: "2025",
       tag: "Competitive Programming",
-      description: "3⭐️, Highest Rating : 1758",
+      description: "3⭐️, Highest Rating : 1795",
       link: "https://www.codechef.com/users/appu_224",
     },
     {
       img: "achievements/gfg.svg",
       title: "GeeksForGeeks",
-      year: "2020",
+      year: "2025",
       tag: "Data Structure & Algorithm",
       description: "IIT Ropar 6th Rank",
       link: "https://www.geeksforgeeks.org/user/a_ringer22/",

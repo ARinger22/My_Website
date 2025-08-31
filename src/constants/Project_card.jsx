@@ -8,6 +8,7 @@ const Project_card = ({project}) => {
           imgSrc={project.imgSrc}
           altText={project.altText}
           title={project.title}
+          link={project.link}
           description={project.description}
           info={project.info}
           languages={project.languages}  

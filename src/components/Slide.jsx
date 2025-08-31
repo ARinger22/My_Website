@@ -63,7 +63,6 @@ export const Heading = styled.span`
 `;
 
 export const Skills = styled.h1`
-    background: linear-gradient(90deg, fuchsia, red, yellow);
     -webkit-background-clip: text;
-    color: transparent;
+    color: white;
 `;

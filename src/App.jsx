@@ -5,6 +5,7 @@ import Projects from './components/Projects'
 import About from './components/About'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Achievements from './components/Achievements'
 
 import {
   BrowserRouter as Router, Routes, Route
@@ -12,12 +13,13 @@ import {
 
 function App() {
   return (
-    <div className="h-screen bg-gradient-to-b from-black to-gray-700">
+    <div className="overflow-x-hidden">
       <Navbar />
       <Home />
       <About />
       <Experience />
       <Projects />
+      <Achievements />
       <Contact />
       <Footer />
     </div>

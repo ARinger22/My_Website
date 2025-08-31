@@ -53,7 +53,7 @@ const Lining = styled.div`
     position: relative;
     left: 8px;
     width: 3px;
-    height: 6rem;
+    height: 7rem;
     background: rgb(0, 117, 230);
     border-radius: 5px;
 `;
@@ -74,18 +74,6 @@ const ContactDiv = styled.div`
         transition: transform 0.3s ease;
         filter: drop-shadow(0px 6px 10px rgb(0, 117, 230)); /* Add a blue shadow */
     }
-`;
-
-const ContactDivision = styled.div`
-  animation: ${slideInFromBottom} 0.3s ease-in-out;
-`;
-
-const Name = styled.h1`
-  animation: ${slideInFromLeft} 0.3s ease-in-out;
-`;
-
-const NavComponents = styled.h1`
-  animation: ${slideInFromRight} 0.3s ease-in-out;
 `;
 
 const Heading = styled.span`
@@ -110,15 +98,15 @@ export default function Navbar() {
     };
 
     return (
-        <StickyNavbar className="bg-gradient-to-b from-black to-gray-700" >
+        <StickyNavbar className="bg-gray-700" >
             <nav className="mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                     <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                        <Name className="flex flex-shrink-0 items-center">
+                        <div className="flex flex-shrink-0 items-center">
                             <a href='/'> <img className="h-10 w-auto filter invert hover:bg-blue-200" src={logo} alt="logo" /> </a>
                             <Heading className="font-serif text-white ml-2 text-lg font-extrabold"><a href='/'> Arpit </a></Heading>
-                        </Name>
-                        <NavComponents className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end">
+                        </div>
+                        <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end">
                             <div className="hidden sm:block">
                                 <div className="flex space-x-4">
                                     <a href="/"
@@ -129,28 +117,34 @@ export default function Navbar() {
                                         onClick={() => handleLinkClick("About_page")}
                                         offset={-70}
                                         duration={500}
-                                        className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium cursor-pointer">About</a>}
+                                        className="text-gray-300 hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium cursor-pointer">About</a>}
                                     <a href="#Experience_page"
-                                        onClick={() => handleLinkClick("About_page")}
+                                        onClick={() => handleLinkClick("Experience_page")}
                                         offset={-70}
                                         duration={500}
-                                        className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium cursor-pointer">Experience</a>
+                                        className="text-gray-300 hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium cursor-pointer">Experience</a>
                                     <a href="#Project_page"
-                                        onClick={() => handleLinkClick("About_page")}
+                                        onClick={() => handleLinkClick("Project_page")}
                                         offset={-70}
                                         duration={500}
-                                        className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium cursor-pointer">Projects</a>
+                                        className="text-gray-300 hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium cursor-pointer">Projects</a>
+                                    <a href="#Achievements_page"
+                                        onClick={() => handleLinkClick("Achievements_page")}
+                                        offset={-70}
+                                        duration={500}
+                                        className="text-gray-300 hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium cursor-pointer">Achievements
+                                    </a>
                                     <a href="#Contact_page"
-                                        onClick={() => handleLinkClick("About_page")}
+                                        onClick={() => handleLinkClick("Contact_page")}
                                         offset={-70}
                                         duration={500}
-                                        className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium cursor-pointer">Contact</a>
+                                        className="text-gray-300 hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-3 py-2 text-large font-medium cursor-pointer">Contact</a>
                                 </div>
                             </div>
-                        </NavComponents>
+                        </div>
                     </div>
                     <div className="items-center sm:hidden mr-6">
-                        <NavComponents
+                        <div
                             type="button"
                             className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white" aria-controls="mobile-menu"
                             onClick={toggleMobileMenu}
@@ -166,9 +160,9 @@ export default function Navbar() {
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                                 </svg>
                             )}
-                        </NavComponents>
+                        </div>
                     </div>
-                    <ContactDivision>
+                    <div>
                         <ContactDiv className="sc-301b97f5-0 gbbQfw">
                             <a className='text-white hover:text-blue-400' target="_blank" rel="noreferrer" aria-label="a to my Github" href="https://github.com/ARinger22">
                                 <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -209,7 +203,7 @@ export default function Navbar() {
                             </a>
                             <Lining className="barra"></Lining>
                         </ContactDiv>
-                    </ContactDivision>
+                    </div>
                 </div>
                 {isMobileMenuOpen &&
                     <MobileMenu className="sm:hidden bg-gray-1000" id="mobile-menu">
@@ -221,19 +215,23 @@ export default function Navbar() {
                             <a href="#About_page"
                                 offset={-70}
                                 duration={500}
-                                className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium cursor-pointer">About</a>
+                                className="text-gray-300 hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium cursor-pointer">About</a>
                             <a href="#Experience_page"
                                 offset={-70}
                                 duration={500}
-                                className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium cursor-pointer">Experience</a>
+                                className="text-gray-300 hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium cursor-pointer">Experience</a>
                             <a href="#Project_page"
                                 offset={-70}
                                 duration={500}
-                                className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium cursor-pointer">Projects</a>
+                                className="text-gray-300 hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium cursor-pointer">Projects</a>
+                            <a href="#Achievements_page"
+                                offset={-70}
+                                duration={500}
+                                className="text-gray-300 hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium cursor-pointer">Achievements</a>
                             <a href="#Contact_page"
                                 offset={-70}
                                 duration={500}
-                                className="text-gray-300 hover:border-b hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium cursor-pointer">Contact</a>
+                                className="text-gray-300 hover:border-blue-400 hover:text-blue-400 hover:border-b-2 rounded-md px-2 py-1 text-large font-medium cursor-pointer">Contact</a>
                         </div>
                     </MobileMenu>
                 }

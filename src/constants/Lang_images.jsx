@@ -16,6 +16,14 @@ const Lang_images = {
     chrome: <img src={require('../assets/chrome.svg').default} alt="python" className="mx-auto w-10 h-10 object-contain" />,
     html: <img src={require('../assets/html-1.svg').default} alt="python" className="mx-auto w-10 h-10 object-contain" />,
     css: <img src={require('../assets/css-3.svg').default} alt="python" className="mx-auto w-10 h-10 object-contain" />,
+    java: <img src={require('../assets/java-logo.svg').default} alt="python" className="mx-auto w-10 h-10 object-contain" />,
+    mongodb: <img src={require('../assets/mongodb.svg').default} alt="mongodb" className="mx-auto w-10 h-10 object-contain" />,
+    rpi: <img src={require('../assets/rpi.svg').default} alt="rpi" className="mx-auto w-10 h-10 object-contain" />,
+    microcontroller: <img src={require('../assets/microcontroller.png')} alt="microcontroller" className="mx-auto w-10 h-10 object-contain" />,
+    ganache: <img src={require('../assets/ganache-icon.png')} alt="ganache" className="mx-auto w-10 h-10 object-contain" />,
+    arduinoide: <img src={require('../assets/arduinoide.png')} alt="arduinoide" className="mx-auto w-10 h-10 object-contain" />,
+    socket: <img src={require('../assets/socketio-icon.svg').default} alt="socket" className="mx-auto w-10 h-10 object-contain" />,
+    graph: <img src={require('../assets/GraphAPIlogo.png')} alt="graph" className="mx-auto w-10 h-10 object-contain" />,
 }
 
 export default Lang_images;

@@ -9,6 +9,11 @@ const images = {
     xv6 : require('../Project_Images/xv6.jpeg'),
     QLearning : require('../Project_Images/Q-Learning.png'),
     steam: require('../Project_Images/steam.png'),
+    emotion : require('../Project_Images/emotion.jpg'),
+    phd : require('../Project_Images/phd.png'),
+    condense : require('../Project_Images/condense.png'),
+    script: require('../Project_Images/script.png'),
+    living: require('../Project_Images/living.jpg'),
 };
 
 export default images;

@@ -32,37 +32,34 @@ export function SkillCard2({ time, imgSrc, altText, title }) {
                     <h4 className="text-center text-lg text-white font-bold mt-3">{title}</h4>
                 </div>
             </div>
-            <h4 className="flex justify-center text-center inline-block text-lg text-white font-bold mt-3">{time}</h4>
+            <h4 className="flex justify-center text-center text-lg text-white font-bold mt-3">{time}</h4>
         </div>
     );
 }
 
-export function SkillCard3({ imgSrc, altText, title, info, description, languages }) {
+export function SkillCard3({ imgSrc, altText, title, link, info, description, languages }) {
     // console.log(languages[0])
     return (
-        <div className={`mb-2 border border-sky-900 rounded-lg shadow`} data-aos="zoom-in-out" >
-            <div className="relative group overflow-hidden">
-                <img
-                    src={imgSrc}
-                    alt={altText}
-                    className="mx-auto w-full rounded-lg h-60 object-cover"
-                />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="text-white text-center">
-                        <Skills className="text-3xl font-bold mb-2">{title}</Skills>
-                        <h2 className="text-2xl font-bold " style={{ color: '#51E2F5' }}>{description}</h2>
-                        <p className='text-xl font-bold text-rose-600' >{info}</p>
-                        <div className='mt-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
-                            {languages.map((lang, index) => {
-                                return (
-                                    <div key={index}>
-                                        {Lang_images[lang]} {/* Directly use the component */}
-                                    </div>
-                                )
-                            })
-                            }
-                        </div>
-                    </div>
+        <div className={`rounded-lg border border-purple-200 bg-gray-700`} data-aos="zoom-in-out" >
+            <img
+                onClick={() => window.open(link, "_blank")}
+                src={imgSrc}
+                alt={altText}
+                className="w-full rounded-t-lg h-60 object-cover cursor-pointer"
+            />
+            <div className="flex flex-col gap-4 p-5 text-white rounded-b-lg w-full">
+                <Skills className="text-2xl font-[500] ">{title}</Skills>
+                <h2 className="text-md font-[600] text-red-400">{description}</h2>
+                <p className='text-md font-[300]' >{info}</p>
+                <div className='grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7'>
+                    {languages.map((lang, index) => {
+                        return (
+                            <div key={index}>
+                                {Lang_images[lang]} 
+                            </div>
+                        )
+                    })
+                    }
                 </div>
             </div>
         </div>

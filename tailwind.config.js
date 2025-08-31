@@ -13,7 +13,11 @@ module.exports = {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
         }
-      }
+      },
+      screens: {
+        'lg2': '1024px',
+        'xl2': '1500px',
+      },
     },
     animatedSettings: {
       animatedSpeed: 1000,

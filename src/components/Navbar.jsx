@@ -109,7 +109,7 @@ export default function Navbar() {
                         <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end">
                             <div className="hidden sm:block">
                                 <div className="flex space-x-4">
-                                    <a href="/"
+                                    <a href="#Home_page"
                                         offset={-70}
                                         duration={500}
                                         className="text-white rounded-md px-3 py-2 text-large font-medium hover:border-b-2 hover:border-blue-400 hover:text-blue-400 cursor-pointer" aria-current="page">Home</a>
@@ -208,7 +208,7 @@ export default function Navbar() {
                 {isMobileMenuOpen &&
                     <MobileMenu className="sm:hidden bg-gray-1000" id="mobile-menu">
                         <div className="">
-                            <a href="/"
+                            <a href="#Home_page"
                                 offset={-70}
                                 duration={500}
                                 className="text-white rounded-md px-1 py-1 text-large font-medium hover:border-blue-400 hover:text-blue-400 hover:border-b-2 cursor-pointer" aria-current="page">Home</a>

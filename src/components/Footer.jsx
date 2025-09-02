@@ -44,7 +44,7 @@ export default function Footer() {
                         16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path>
                         </svg>
                     </a>
-                    <a className='mx-2 text-2xl font-bold hover:text-blue-600' target="_blank" aria-label="Link to contact me on Instagram" href="https://www.instagram.com/arpit.g_0224/" rel="noreferrer">
+                    <a className='mx-2 text-2xl font-bold hover:text-blue-600' target="_blank" aria-label="Link to contact me on Instagram" href="https://www.instagram.com/artverse224/" rel="noreferrer">
                         <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>

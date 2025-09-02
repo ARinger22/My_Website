@@ -36,7 +36,7 @@ export default function Achievements() {
     },
     {
       img: "achievements/research.png",
-      title: "Researcg Paper",
+      title: "Research Paper",
       year: "2025",
       tag: "Research",
       description: "SLM as an Adaptive Cache Layer for LLMs",

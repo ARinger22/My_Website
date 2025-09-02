@@ -31,11 +31,11 @@ export default function Contact() {
   };
 
   return (
-    <div className='h-screen flex items-center justify-center bg-gradient-to-b from-black to-gray-700' id="Contact_page">
-      <section className="mx-6 dark:bg-gray-700 rounded-lg">
-        <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-          <h2 className="mb-4 text-4xl text-blue-600 tracking-tight font-extrabold text-center dark:text-white" data-aos="fade-up">Contact Me</h2>
-          <p className="mb-4 lg:mb-10 font-light text-gray-200 dark:text-gray-200 sm:text-xl" data-aos="fade-up">If you need any help or want to contact me to contribute with any project or any idea. You can contact me here.</p>
+    <div className='flex items-center justify-center bg-gradient-to-b from-black to-gray-700 w-full p-20' id="Contact_page">
+      <section className=" dark:bg-gray-700 rounded-lg">
+        <div className="p-10 mx-auto max-w-screen-md flex flex-col gap-5">
+          <h2 className="text-4xl text-blue-600 tracking-tight font-extrabold text-center dark:text-white" data-aos="fade-up">Contact Me</h2>
+          <p className="text-gray-200 dark:text-gray-200" data-aos="fade-up">If you need any help or want to contact me to contribute with any project or any idea. You can contact me here.</p>
           <form ref={form} onSubmit={sendEmail}  action="#" className="space-y-8" data-aos="fade-up">
             <div>
               <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-200 dark:text-gray-300">Your email</label>
